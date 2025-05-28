@@ -1,0 +1,7 @@
+{
+    "scripts": [
+        "create path (sling:OrderedFolder) /content/dam/aem-todo",
+        "create path (nt:unstructured) /content/dam/aem-todo/jcr:content",
+        "set properties on /content/dam/aem-todo/jcr:content\n  set cq:conf{String} to /conf/aem-todo\n  set jcr:title{String} to \"AEM ToDo App\"\nend"
+    ]
+}

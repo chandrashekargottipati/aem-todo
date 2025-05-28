@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Static Frontend file</title>
+    <meta name="template" content="page-content" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/clientlib-site/site.css" />
+    <script defer src="/clientlib-site/site.js"></script>
+  </head>
+  <body class="min-h-screen bg-gray-50">
+    <div class="container mx-auto px-4 py-8">
+      <div class="cmp-container">
+        <!-- Tailwind test div -->
+        <div id="tailwind-test" class="bg-blue-600 text-white p-4 rounded-lg shadow-md mb-6 text-center font-semibold">
+          Tailwind CSS is working!
+        </div>
+        <header class="bg-white shadow-sm rounded-lg p-4 mb-6">
+          <div class="cmp-experiencefragment">
+            <div class="cmp-container">
+              <div class="navigation">
+                <nav
+                  class="flex items-center space-x-4 text-gray-700 font-medium"
+                  role="navigation"
+                  itemscope
+                  itemtype="http://schema.org/SiteNavigationElement"
+                >
+                  <ul class="flex space-x-6">
+                    <li
+                      class="cmp-navigation__item cmp-navigation__item--level-0 cmp-navigation__item--active"
+                    >
+                      <a
+                        href="/content/aem-todo/us/en.html"
+                        title="AEM ToDo App"
+                        aria-current="page"
+                        class="text-blue-600 font-bold hover:text-blue-800 transition-colors"
+                        >AEM ToDo App</a
+                      >
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="languagenavigation">
+                <nav class="cmp-languagenavigation">
+                  <ul class="cmp-languagenavigation__group">
+                    <li
+                      class="cmp-languagenavigation__item cmp-languagenavigation__item--langcode-en cmp-languagenavigation__item--level-0"
+                    >
+                      <span class="cmp-languagenavigation__item-title" lang="en"
+                        >United States</span
+                      >
+                      <ul class="cmp-languagenavigation__group">
+                        <li
+                          class="cmp-languagenavigation__item cmp-languagenavigation__item--langcode-en cmp-languagenavigation__item--level-1"
+                        >
+                          <a
+                            class="cmp-languagenavigation__item-link"
+                            href="/content/aem-todo/us/en.html"
+                            hreflang="en"
+                            lang="en"
+                            rel="alternate"
+                            title="English"
+                            >English</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="search">
+                <section
+                  class="relative mt-4"
+                  role="search"
+                  data-cmp-is="search"
+                  data-cmp-min-length="3"
+                  data-cmp-results-size="10"
+                >
+                  <form
+                    class="cmp-search__form"
+                    data-cmp-hook-search="form"
+                    method="get"
+                    action="/content/aem-todo/us/en.searchresults.json/_jcr_content/root/search"
+                    autocomplete="off"
+                  >
+                    <div class="relative flex items-center">
+                      <i
+                        class="cmp-search__icon"
+                        data-cmp-hook-search="icon"
+                      ></i>
+                      <span
+                        class="cmp-search__loading-indicator"
+                        data-cmp-hook-search="loadingIndicator"
+                      ></span>
+                      <input
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
+                        data-cmp-hook-search="input"
+                        type="text"
+                        name="fulltext"
+                        placeholder="Search"
+                        role="combobox"
+                        aria-autocomplete="list"
+                        aria-haspopup="true"
+                        aria-invalid="false"
+                      />
+                      <button
+                        class="absolute right-2 p-1 text-gray-400 hover:text-gray-600"
+                        data-cmp-hook-search="clear"
+                      >
+                        <i class="cmp-search__clear-icon"></i>
+                      </button>
+                    </div>
+                  </form>
+                  <div
+                    class="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg"
+                    data-cmp-hook-search="results"
+                    role="listbox"
+                    aria-multiselectable="false"
+                  ></div>
+                  <script data-cmp-hook-search="itemTemplate" type="x-template">
+                    <a class="block p-3 hover:bg-gray-100" data-cmp-hook-search="item">
+                        <span class="font-medium text-gray-800" data-cmp-hook-search="itemTitle"></span>
+                    </a>
+                  </script>
+                </section>
+              </div>
+            </div>
+          </div>
+        </header>
+        <main class="bg-white rounded-lg shadow-sm p-6 mb-6">
+          <div class="cmp-container">
+            <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
+              <div class="title aem-GridColumn aem-GridColumn--default--12">
+                <div class="border-b border-gray-200 pb-4 mb-4">
+                  <h1 class="text-3xl font-bold text-gray-800">Welcome to AEM ToDo App!</h1>
+                </div>
+              </div>
+              <div
+                class="container responsivegrid aem-GridColumn aem-GridColumn--default--12"
+              >
+                <div class="cmp-container">
+                  <div class="aem-Grid aem-Grid--12 aem-Grid--default--12">
+                    <div
+                      class="text aem-GridColumn aem-GridColumn--default--12"
+                    >
+                      <div class="prose max-w-none">
+                        <p class="text-gray-700 mb-4">
+                          This is the main welcome page of your web site. A few
+                          notes about this site:
+                        </p>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                          <li>
+                            It is built entirely with the Core Components - see
+                            the
+                            <a href="https://www.adobe.com/go/aem_cmp_library"
+                              >Component Library</a
+                            >
+                            to view the components in all their shapes and
+                            forms.
+                          </li>
+                          <li>
+                            Only the Hello World component has been built custom
+                            to illustrate how further components can be built
+                            (which also shows how JavaScript is best initialized
+                            for components, so that it also works well with the
+                            Page Editor).
+                          </li>
+                          <li>
+                            The page header and footer are assembled as
+                            Experience Fragments, which
+                            <a
+                              href="https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/experience-fragment.html#localized-site-structure"
+                              >can also be localized if needed</a
+                            >.<br />
+                          </li>
+                          <li>
+                            The Style System is used to insert a sematic
+                            &lt;header&gt; and &lt;footer&gt; element to the
+                            corresponding Experience Fragment components, as
+                            well as a &lt;main&gt; element to the container of
+                            the page content. This allows to apply some CSS
+                            specifically to these sections of the page.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div
+                      class="helloworld aem-GridColumn aem-GridColumn--default--12"
+                    >
+                      <div class="bg-blue-50 p-6 rounded-lg border border-blue-100" data-cmp-is="helloworld">
+                        <h2 class="text-2xl font-bold text-blue-800 mb-4">
+                          Hello World Component
+                        </h2>
+                        <div class="bg-white p-4 rounded shadow-sm">
+                          <p class="font-medium text-gray-600 mb-2">
+                            Model message:
+                          </p>
+                          <pre
+                            class="bg-gray-100 p-3 rounded text-sm overflow-auto"
+                            data-cmp-hook-helloworld="model"
+                          >
+Hello World!
+Resource type is: aem-todo/components/helloworld
+Current page is:  /content/aem-todo/us/en
+This is instance: 78f60b4a-a52a-4021-82d5-fb17f5fb95cf
+</pre
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <footer class="bg-gray-100 rounded-lg p-4 mt-6 text-center text-gray-600 text-sm">
+          <div class="cmp-experiencefragment">
+            <div class="cmp-container">
+              <div class="py-2">
+                <div class="w-full">
+                  <hr class="border-t border-gray-200" />
+                </div>
+              </div>
+              <div class="mt-2">
+                <div class="text-center">
+                  <p class="text-gray-500 text-sm">Copyright 2019, AEM ToDo App. All rights reserved.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
